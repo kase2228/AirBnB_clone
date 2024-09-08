@@ -8,6 +8,7 @@ from copy import deepcopy
 class BaseModel:
     """The basemodel class"""
     form = "%Y-%m-%dT%H:%M:%S.%f"
+
     def __init__(self):
         """Constructor of the class"""
         self.id = str(uuid4())
@@ -31,5 +32,3 @@ class BaseModel:
 
     def __str__(self):
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
-
-
